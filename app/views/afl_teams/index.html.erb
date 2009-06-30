@@ -1,0 +1,21 @@
+<h1>Listing AFL Teams</h1>
+
+<table>
+  <tr>
+	<th>Name</th>
+	<th>Abbreviation</th>
+  </tr>
+
+<% for afl_team in @afl_teams %>
+  <tr valign="top">
+	<td><%= link_to h(afl_team.name), edit_afl_team_path(afl_team) %></td>
+	<td><%= h(afl_team.abbr) %></td>
+    <td><%= link_to 'Show', afl_team %></td>
+    <td><%= link_to 'Destroy', afl_team, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New AFL Team', new_afl_team_path %>

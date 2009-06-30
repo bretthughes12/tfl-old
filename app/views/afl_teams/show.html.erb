@@ -1,0 +1,12 @@
+<h1>AFL Team details</h1>
+
+<table>
+	<% for column in AflTeam.content_columns %>
+	<tr>
+	  	<td><b><%= column.human_name %>:</b></td> <td><%=h @afl_team.send(column.name) %></td>
+	</tr>
+	<% end %>
+</table>
+
+<%= link_to 'Edit', edit_afl_team_path(@afl_team) %> |
+<%= link_to 'Back', afl_teams_path %>

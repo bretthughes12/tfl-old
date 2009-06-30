@@ -1,0 +1,10 @@
+<h1>New afl_teams</h1>
+
+<% form_for(@afl_team) do |f| %>
+  <%= render :partial => 'form' %>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', afl_teams_path %>

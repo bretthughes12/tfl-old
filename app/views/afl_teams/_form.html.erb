@@ -1,0 +1,17 @@
+<%= error_messages_for 'afl_team' %>
+
+<!--[form:afl_team]-->
+<table>
+	<tr>
+		<td><label for="afl_team_name">Name:</label></td>
+		<td class="required-field">*</td>
+		<td><%= text_field 'afl_team', 'name'  %></td>
+	</tr>
+	<tr>
+		<td><label for="afl_team_abbr">Abbreviation:</label></td>
+		<td class="required-field">*</td>
+		<td><%= text_field 'afl_team', 'abbr', :size => 4  %></td>
+	</tr>
+</table>
+
+<!--[eoform:afl_team]-->
