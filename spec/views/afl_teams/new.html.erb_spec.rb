@@ -4,7 +4,7 @@ describe "/afl_teams/new.html.erb" do
   include AflTeamsHelper
 
   before(:each) do
-    assigns[:afl_teams] = stub_model(AflTeams,
+    assigns[:afl_team] = stub_model(AflTeam,
       :new_record? => true
     )
   end

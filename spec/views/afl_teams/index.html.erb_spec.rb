@@ -5,8 +5,8 @@ describe "/afl_teams/index.html.erb" do
 
   before(:each) do
     assigns[:afl_teams] = [
-      stub_model(AflTeams),
-      stub_model(AflTeams)
+      stub_model(AflTeam),
+      stub_model(AflTeam)
     ]
   end
 

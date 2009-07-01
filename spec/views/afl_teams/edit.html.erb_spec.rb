@@ -4,7 +4,7 @@ describe "/afl_teams/edit.html.erb" do
   include AflTeamsHelper
 
   before(:each) do
-    assigns[:afl_teams] = @afl_teams = stub_model(AflTeams,
+    assigns[:afl_team] = @afl_team = stub_model(AflTeam,
       :new_record? => false
     )
   end
@@ -12,7 +12,7 @@ describe "/afl_teams/edit.html.erb" do
   it "renders the edit afl_teams form" do
     render
 
-    response.should have_tag("form[action=#{afl_teams_path(@afl_teams)}][method=post]") do
+    response.should have_tag("form[action=#{afl_team_path(@afl_team)}][method=post]") do
     end
   end
 end

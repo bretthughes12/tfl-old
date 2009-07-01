@@ -15,8 +15,8 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe AflTeam do
   before(:each) do
     @valid_attributes = {
-      :name => "value for name",
-      :abbr => "value for abbr"
+      :name => "Tasmania",
+      :abbr => "TAS"
     }
   end
 
