@@ -1,0 +1,22 @@
+<h1>Listing tfl_teams</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Abbr</th>
+  </tr>
+
+<% @tfl_teams.each do |tfl_team| %>
+  <tr>
+    <td><%=h tfl_team.name %></td>
+    <td><%=h tfl_team.abbr %></td>
+    <td><%= link_to 'Show', tfl_team %></td>
+    <td><%= link_to 'Edit', edit_tfl_team_path(tfl_team) %></td>
+    <td><%= link_to 'Destroy', tfl_team, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tfl_team', new_tfl_team_path %>

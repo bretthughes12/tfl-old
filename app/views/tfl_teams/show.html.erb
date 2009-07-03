@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @tfl_team.name %>
+</p>
+
+<p>
+  <b>Abbr:</b>
+  <%=h @tfl_team.abbr %>
+</p>
+
+
+<%= link_to 'Edit', edit_tfl_team_path(@tfl_team) %> |
+<%= link_to 'Back', tfl_teams_path %>
