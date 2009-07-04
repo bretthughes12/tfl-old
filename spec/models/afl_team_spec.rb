@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20090630112715
+# Schema version: 20090703095724
 #
 # Table name: afl_teams
 #

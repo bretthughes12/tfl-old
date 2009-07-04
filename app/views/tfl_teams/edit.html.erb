@@ -1,18 +1,11 @@
-<h1>Editing tfl_team</h1>
+<% title "Editing TFL Team" %>
+
+<h1><%= yield(:title) %></h1>
 
 <% form_for(@tfl_team) do |f| %>
-  <%= f.error_messages %>
-
+  <%= render :partial => 'form' %>
   <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :abbr %><br />
-    <%= f.text_field :abbr %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit "Update" %>
   </p>
 <% end %>
 

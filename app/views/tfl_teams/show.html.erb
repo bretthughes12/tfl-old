@@ -1,13 +1,14 @@
-<p>
-  <b>Name:</b>
-  <%=h @tfl_team.name %>
-</p>
+<% title "TFL Team details" %>
 
-<p>
-  <b>Abbr:</b>
-  <%=h @tfl_team.abbr %>
-</p>
+<h1><%= yield(:title) %></h1>
 
+<table>
+	<% for column in TflTeam.content_columns %>
+	<tr>
+	  	<td><b><%= column.human_name %>:</b></td> <td><%=h @tfl_team.send(column.name) %></td>
+	</tr>
+	<% end %>
+</table>
 
 <%= link_to 'Edit', edit_tfl_team_path(@tfl_team) %> |
 <%= link_to 'Back', tfl_teams_path %>

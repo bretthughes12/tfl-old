@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20090630112715
+# Schema version: 20090703095724
 #
 # Table name: afl_teams
 #
@@ -11,4 +11,10 @@
 #
 
 class AflTeam < ActiveRecord::Base
+
+  validates_presence_of     :abbr, :name
+  validates_uniqueness_of   :abbr, :name
+  validates_length_of       :abbr,           :in => 2..4
+  validates_length_of       :name,           :maximum => 50
+
 end

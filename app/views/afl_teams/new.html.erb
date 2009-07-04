@@ -1,4 +1,6 @@
-<h1>New afl_teams</h1>
+<% title "New AFL Team" %>
+
+<h1><%= yield(:title) %></h1>
 
 <% form_for(@afl_team) do |f| %>
   <%= render :partial => 'form' %>

@@ -1,17 +1,18 @@
-<h1>Listing tfl_teams</h1>
+<% title "Listing TFL Teams" %>
 
-<table>
+<h1><%= yield(:title) %></h1>
+
+<table cellpadding="5" cellspacing="0">
   <tr>
-    <th>Name</th>
-    <th>Abbr</th>
+	<th>Name</th>
+	<th>Abbreviation</th>
   </tr>
 
-<% @tfl_teams.each do |tfl_team| %>
-  <tr>
-    <td><%=h tfl_team.name %></td>
-    <td><%=h tfl_team.abbr %></td>
+<% for tfl_team in @tfl_teams %>
+  <tr valign="top">
+	<td><%= link_to h(tfl_team.name), edit_tfl_team_path(tfl_team) %></td>
+	<td><%= h(tfl_team.abbr) %></td>
     <td><%= link_to 'Show', tfl_team %></td>
-    <td><%= link_to 'Edit', edit_tfl_team_path(tfl_team) %></td>
     <td><%= link_to 'Destroy', tfl_team, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
@@ -19,4 +20,4 @@
 
 <br />
 
-<%= link_to 'New tfl_team', new_tfl_team_path %>
+<%= link_to 'New TFL Team', new_tfl_team_path %>
