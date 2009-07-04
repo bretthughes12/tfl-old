@@ -1,4 +1,6 @@
 class TflTeamsController < ApplicationController
+  layout 'tfl'
+  
   # GET /tfl_teams
   # GET /tfl_teams.xml
   def index

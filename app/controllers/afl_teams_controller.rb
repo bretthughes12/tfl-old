@@ -1,4 +1,6 @@
 class AflTeamsController < ApplicationController
+  layout 'tfl'
+  
   # GET /afl_teams
   # GET /afl_teams.xml
   def index
