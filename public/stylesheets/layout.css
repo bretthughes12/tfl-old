@@ -1,0 +1,44 @@
+body, p, h1, h2, h3, h4, h5, h6, ul, li, form{
+	margin:0;
+	padding:0;
+	line-height:18px;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+	margin-bottom:18px;
+}
+
+#page{
+	display:block;
+	width:900px;
+	margin: 0px auto;
+}
+
+#header{
+	height:108px;
+	width:100%;
+}
+
+#footer{
+	width:100%;
+	height:54px;
+	clear:both;
+}
+
+#middle{
+	width:100%;
+	float:left;
+}
+
+#middle #main{
+	width:594px;
+	float:left;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	padding-left: 18px;
+}
+
+#middle #sidebar{
+	width:306px;
+	float:left;
+}

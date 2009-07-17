@@ -12,8 +12,8 @@
   <tr valign="top">
 	<td><%= link_to h(afl_team.name), edit_afl_team_path(afl_team) %></td>
 	<td><%= h(afl_team.abbr) %></td>
-    <td><%= link_to 'Show', afl_team %></td>
-    <td><%= link_to 'Destroy', afl_team, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class="action"><%= link_to 'Show', afl_team %></td>
+    <td class="action"><%= link_to 'Destroy', afl_team, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

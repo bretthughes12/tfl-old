@@ -1,0 +1,32 @@
+body, p, td, th {
+	font-family: Trebuchet, Tahoma, Arial, sans-serif;
+}
+
+body, p {
+	font-size:12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Georgia, Times, Times New Roman, serif;
+	color:#083e46;
+}
+
+.action {
+	font-size: smaller;
+}
+
+#header, #footer {background-color:#d8635a}
+#middle {background-color: #d8827b }
+#main {background-color:#ffffff }
+
+a {
+	color:#19626c; 
+	text-decoration:underline;
+}
+
+a:visited {color:#4da9b5;}
+
+a:hover {
+	color:#083e46; 
+	text-decoration:underline;
+}
