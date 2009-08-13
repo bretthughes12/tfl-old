@@ -17,4 +17,14 @@ class AflTeam < ActiveRecord::Base
   validates_length_of       :abbr,           :in => 2..4
   validates_length_of       :name,           :maximum => 50
 
+  def self.refresh_from_array(fields)
+    afl_team = find_by_abbr(fields[2])
+    if afl_team
+      afl_team.name = fields[0]
+      afl_team.save
+    else
+      create(:name => fields[0], 
+             :abbr => fields[2])
+    end
+  end
 end
