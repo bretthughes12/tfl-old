@@ -30,3 +30,27 @@ a:hover {
 	color:#083e46; 
 	text-decoration:underline;
 }
+
+#nav, #nav ul {
+	list-style: none;
+}
+
+#nav li {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+#nav a:link, #nav a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#nav ul li {
+	border: 0 none transparent;
+	border-bottom: 1px solid #E7EDF5;
+	border-top: .5em solid #FFF;
+	background-color: #B03127;
+	font-size: 100%;
+	font-weight: normal;
+	width: 10em;
+}

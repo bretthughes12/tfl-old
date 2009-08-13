@@ -19,9 +19,13 @@ p, h1, h2, h3, h4, h5, h6{
 	width:100%;
 }
 
+#header img{
+	float:left;
+}
+
 #footer{
 	width:100%;
-	height:54px;
+	height:36px;
 	clear:both;
 }
 
@@ -34,11 +38,49 @@ p, h1, h2, h3, h4, h5, h6{
 	width:594px;
 	float:left;
 	padding-top: 18px;
-	padding-bottom: 18px;
 	padding-left: 18px;
+	padding-bottom: 18px;
 }
 
 #middle #sidebar{
 	width:306px;
 	float:left;
+}
+
+#nav, #nav ul {
+	padding-left: 180px;
+	padding-top: 81px;
+	margin: 0;
+}
+
+#nav li {
+	float: left;
+	position: relative;
+	margin-right: 1em;
+}
+
+#nav a:link, #nav a:visited {
+	display: block;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+* html #nav a {
+	width: 100%;
+}
+
+#nav ul {
+	display: none;
+	position: absolute;
+	padding: 0;
+}
+
+#nav ul li {
+	margin-bottom: -1px;
+	margin-top: 1px;
+	padding: 0;
+}
+
+#nav li:hover ul {
+	display: block;
 }

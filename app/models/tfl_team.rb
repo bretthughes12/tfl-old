@@ -17,4 +17,14 @@ class TflTeam < ActiveRecord::Base
   validates_length_of       :abbr,           :in => 2..4
   validates_length_of       :name,           :maximum => 50
 
+  def self.refresh_from_array(fields)
+    tfl_team = find_by_abbr(fields[1])
+    if tfl_team
+      tfl_team.name = fields[0]
+      tfl_team.save
+    else
+      create(:name => fields[0], 
+             :abbr => fields[1])
+    end
+  end
 end
