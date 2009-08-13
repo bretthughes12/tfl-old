@@ -1,6 +1,6 @@
 namespace :tfl do
 
-  # require 'fastercsv'
+  require 'fastercsv'
 
   desc "Load the AFL teams reference table"
   task :load_afl_teams => ['db/data/afl_teams.csv', "db:migrate"] do |t|
