@@ -1,0 +1,14 @@
+<% title "Player details" %>
+
+<h1><%= yield(:title) %></h1>
+
+<table>
+	<% for column in Player.content_columns %>
+	<tr>
+	  	<td><b><%= column.human_name %>:</b></td> <td><%=h @player.send(column.name) %></td>
+	</tr>
+	<% end %>
+</table>
+
+<%= link_to 'Edit', edit_player_path(@player) %> |
+<%= link_to 'Back', players_path %>

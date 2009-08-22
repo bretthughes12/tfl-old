@@ -1,0 +1,17 @@
+<%= error_messages_for 'tfl_team' %>
+
+<!--[form:tfl_team]-->
+<table>
+	<tr>
+		<td><label for="tfl_team_name">Name:</label></td>
+		<td class="required-field">*</td>
+		<td><%= text_field 'tfl_team', 'name'  %></td>
+	</tr>
+	<tr>
+		<td><label for="tfl_team_abbr">Abbreviation:</label></td>
+		<td class="required-field">*</td>
+		<td><%= text_field 'tfl_team', 'abbr', :size => 4  %></td>
+	</tr>
+</table>
+
+<!--[eoform:tfl_team]-->

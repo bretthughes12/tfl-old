@@ -1,0 +1,39 @@
+# == Schema Information
+# Schema version: 20090822095040
+#
+# Table name: players
+#
+#  id             :integer(4)      not null, primary key
+#  name           :string(50)
+#  tfl_code       :string(10)
+#  afl_team_id    :integer(4)
+#  tfl_team_id    :integer(4)
+#  keeper         :boolean(1)
+#  rookie         :boolean(1)
+#  category       :string(50)
+#  alternate_name :string(50)
+#  created_at     :datetime
+#  updated_at     :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  tfl_code: MyString
+  afl_team_id: 1
+  tfl_team_id: 1
+  keeper: false
+  rookie: false
+  category: MyString
+  alternate_name: MyString
+
+two:
+  name: MyString
+  tfl_code: MyString
+  afl_team_id: 1
+  tfl_team_id: 1
+  keeper: false
+  rookie: false
+  category: MyString
+  alternate_name: MyString

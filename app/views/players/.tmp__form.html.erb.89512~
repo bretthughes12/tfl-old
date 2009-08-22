@@ -1,0 +1,51 @@
+<%= error_messages_for 'player' %>
+
+<!--[form:player]-->
+<table>
+	<tr>
+		<td><label for="player_name">Name:</label></td>
+		<td class="required-field">*</td>
+		<td><%= text_field 'player', 'name'  %></td>
+	</tr>
+	<tr>
+		<td><label for="player_tfl_code">TFL Code:</label></td>
+		<td class="required-field">*</td>
+		<td><%= text_field 'player', 'tfl_code', :size => 8  %></td>
+	</tr>
+	<tr>
+		<td><label for="player_alternate_name">Alternate Name:</label></td>
+		<td>&nbsp</td>
+		<td><%= text_field 'player', 'alternate_name'  %></td>
+	</tr>
+	<tr>
+		<td><label for="player_category">Category:</label></td>
+		<td class="required-field">*</td>
+		<td><%= select 'player', 'category', Player::CATEGORIES  %></td>
+	</tr>
+	<tr>
+		<td><label for="player_afl_team">AFL Team:</label></td>
+		<td>&nbsp</td>
+		<td><%= collection_select 'player', 'afl_team_id', 
+									  @afl_teams, :id, :name,
+									  {:include_blank => true}  %></td>
+	</tr>
+	<tr>
+		<td><label for="player_tfl_team">TFL Team:</label></td>
+		<td>&nbsp</td>
+		<td><%= collection_select 'player', 'tfl_team_id', 
+									  @tfl_teams, :id, :name,
+									  {:include_blank => true}  %></td>
+	</tr>
+	<tr>
+		<td><label for="player_keeper">Keeper:</label></td>
+		<td>&nbsp</td>
+	    <td><%= check_box 'player', 'keeper'  %></td>
+	</tr>
+	<tr>
+		<td><label for="player_rookie">Rookie:</label></td>
+		<td>&nbsp</td>
+	    <td><%= check_box 'player', 'rookie'  %></td>
+	</tr>
+</table>
+
+<!--[eoform:player]-->

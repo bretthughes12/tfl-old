@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20090703095724
+# Schema version: 20090822095040
 #
 # Table name: tfl_teams
 #
@@ -11,6 +11,7 @@
 #
 
 class TflTeam < ActiveRecord::Base
+  has_many :players
 
   validates_presence_of     :abbr, :name
   validates_uniqueness_of   :abbr, :name

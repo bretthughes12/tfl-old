@@ -16,4 +16,11 @@ namespace :tfl do
     end
   end
 
+  desc "Load the Players list"
+  task :load_players => ['db/data/players.csv', "db:migrate"] do |t|
+    FasterCSV.foreach(t.prerequisites.first) do |row|
+      Player.refresh_from_array(row) unless row[3] == "[none]"
+    end
+  end
+
 end
